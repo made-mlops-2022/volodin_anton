@@ -1,0 +1,3 @@
+input_data_path: "data/raw/generated_dataset.csv"
+model_path: "models/logistic_regression.pkl"
+save_path: "models/prediction.csv"

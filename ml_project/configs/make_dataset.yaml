@@ -1,0 +1,21 @@
+input_data_path: "data/raw/heart_cleveland_upload.csv"
+target_name: "condition"
+features:
+  categorical:
+    - sex
+    - cp
+    - fbs
+    - restecg
+    - exang
+    - slope
+    - ca
+    - thal
+  numerical:
+    - age
+    - trestbps
+    - chol
+    - thalach
+    - oldpeak
+save_path: "data/raw/"
+name: "generated_dataset.csv"
+n_samples: 300

@@ -1,0 +1,5 @@
+[console_scripts]
+make_dataset = src.data.make_dataset:make_dataset
+predict = src.models.predict_model:predict_model
+train = src.models.train_model:train_model
+
