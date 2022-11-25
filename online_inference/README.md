@@ -15,7 +15,7 @@ docker pull trew1237/hw2_image:latest
 ```
 Запуск:
 ```bash
-docker run -p 8000:8000 trew1237/hw2_image:latest
+docker run -d --name hw2_container -p 8000:8000 trew1237/hw2_image:latest
 ```
 Запуск запросов:
 ```bash
