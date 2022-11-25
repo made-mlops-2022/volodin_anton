@@ -13,7 +13,7 @@ if __name__ == "__main__":
             ]
             response = requests.post(
                 "http://127.0.0.1:8000/predict/",
-                json={"data": [request_data], "feature_names": request_features},
+                json={"data": [request_data], "features": request_features},
             )
 
             if response.status_code == 200:
