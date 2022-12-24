@@ -1,14 +1,15 @@
 import pandas as pd
-from configs.config import MakeDatasetParams
 import hydra
-from src.features import build_features
 import numpy as np
 import logging
+
+from src.features import build_features
+from configs.config import MakeDatasetParams
 
 
 @hydra.main(version_base=None, config_path="../../configs", config_name="make_dataset")
 def make_dataset(cfg: MakeDatasetParams):
-    X, _ = build_features.split_to_features_and_target(
+    X, y = build_features.split_to_features_and_target(
         cfg.input_data_path, cfg.target_name
     )
 
@@ -20,6 +21,9 @@ def make_dataset(cfg: MakeDatasetParams):
         else:
             values = np.random.choice(X[col].values, cfg.n_samples)
         generated[col] = values
+
+    if cfg.add_target:
+        generated[y.name] = np.random.randint(2, size=cfg.n_samples)
 
     generated = pd.DataFrame(generated)
 

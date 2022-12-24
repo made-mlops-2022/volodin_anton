@@ -17,7 +17,7 @@ setup(
     },
     install_requires=[
         "hydra-core",
-        "sklearn",
+        "scikit-learn",
         "pandas",
         "numpy",
         "sweetviz",

@@ -1,5 +1,4 @@
 import hydra
-from configs.config import TrainParams
 import logging
 import pickle
 from sklearn.model_selection import train_test_split
@@ -7,6 +6,7 @@ from sklearn.metrics import f1_score
 import sklearn.linear_model
 import sklearn.ensemble
 from src.features import build_features
+from configs.config import TrainParams
 
 
 @hydra.main(
@@ -34,7 +34,7 @@ def train_model(cfg: TrainParams):
     logging.info(f"F1-score is {metric}")
 
     logging.info("Dumping model")
-    with open(cfg.dump_model, "wb") as handler:
+    with open(cfg.dump_model, "w+b") as handler:
         pickle.dump(model, handler)
 
 

@@ -1,5 +1,5 @@
 hydra-core
-sklearn
+scikit-learn
 pandas
 numpy
 sweetviz

@@ -32,3 +32,4 @@ class MakeDatasetParams:
     save_path: str
     name: str
     n_samples: int
+    add_target: bool

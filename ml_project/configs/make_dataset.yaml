@@ -19,3 +19,4 @@ features:
 save_path: "data/raw/"
 name: "generated_dataset.csv"
 n_samples: 300
+add_target: True

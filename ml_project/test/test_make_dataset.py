@@ -1,7 +1,9 @@
 import unittest
+import os
+
 from src.data.make_dataset import make_dataset
 from configs.config import MakeDatasetParams
-import os
+
 
 
 class TestMakeDataset(unittest.TestCase):
@@ -25,6 +27,7 @@ class TestMakeDataset(unittest.TestCase):
             save_path="data/raw/",
             name="test_generated_dataset.csv",
             n_samples=30,
+            add_target=True,
         )
         make_dataset(cfg)
         self.assertTrue(os.path.exists("data/raw/test_generated_dataset.csv"))
