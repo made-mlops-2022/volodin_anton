@@ -1,0 +1,7 @@
+input_data_path: "data/raw/heart_cleveland_upload.csv"
+target_name: "condition"
+splitting_params:
+  test_size: 0.2
+  random_state: 47
+model: sklearn.linear_model.LogisticRegression
+dump_model: "models/logistic_regression.pkl"
